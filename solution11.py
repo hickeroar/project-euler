@@ -42,7 +42,7 @@ movements = [
     [[0,0],[1,0],[1,0],[1,0]],      # vertical
 ]
 
-def getNumberList(move, y, x):
+def getPositionProduct(move, y, x):
     product = 1
 
     for a, b in move:
@@ -59,6 +59,6 @@ def getNumberList(move, y, x):
 for move in movements:
     for y in xrange(0, 20):
         for x in xrange(0, 20):
-            maxProduct = max(maxProduct, getNumberList(move,y,x))
+            maxProduct = max(maxProduct, getPositionProduct(move,y,x))
 
 print maxProduct
