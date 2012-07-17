@@ -30,10 +30,24 @@ def chainLinks(num):
 
 
 lengths = []
+linkDictionary = {}
 
-for start in xrange(1, 1000000, 2):
+for start in xrange(1, 1000000):
 
-    lengths.append((start, len([x for x in chainLinks(start)])))
+    currentLinks = []
+    numLinks = 0
+
+    for link in chainLinks(start):
+
+        if link in linkDictionary:
+            numLinks += linkDictionary[link]
+            break
+
+        numLinks += 1
+
+    linkDictionary[start] = numLinks
+
+    lengths.append((start, numLinks))
 
 
 start, length = max(lengths, key=lambda key: key[1])
