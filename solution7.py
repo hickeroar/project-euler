@@ -4,11 +4,12 @@ By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that 
 What is the 10 001st prime number?
 """
 
+from math import sqrt
+
 def isPrimeNumber(number):
-    for divisor in xrange(3, number/2, 2):
+    for divisor in xrange(3, int(sqrt(number))+1, 2):
         if number % divisor == 0:
             return False
-
     return True
 
 primes = [2]
