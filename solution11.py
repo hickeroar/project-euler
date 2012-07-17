@@ -1,5 +1,5 @@
 """
-In the 2020 grid below, four numbers along a diagonal line have been marked in red.
+In the 20x20 grid below, four numbers along a diagonal line have been marked in red.
 
 NO COLOR IN A COMMENT, GO HERE:
 http://projecteuler.net/problem=11
