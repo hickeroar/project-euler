@@ -49,13 +49,12 @@ def getNumberList(move, y, x):
         y += a
         x += b
 
-        if y > 19 or x > 19:
-            return  
+        if y > 19 or x > 19 or y < 0 or x < 0:
+            return 0
 
         product *= matrix[y][x]
 
     return product
-
 
 for move in movements:
     for y in xrange(0, 20):
