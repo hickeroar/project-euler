@@ -55,7 +55,6 @@ for d in xrange(2, 1001):
         checkLength += 1
 
     if None == repLength:
-        print d
         raise Exception("Precision is inadequate. Raise it!")
 
     if repLength > winningLength:
