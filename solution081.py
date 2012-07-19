@@ -21,6 +21,7 @@ while line:
     matrix.append(map(int,line.split(',')))
     line = matrixFile.readline()
 
+
 doneDict = {}
 
 height = len(matrix)
@@ -33,8 +34,6 @@ def testValue(row, column, total=0):
     if dictKey in doneDict:
         return doneDict[dictKey]
 
-    testValues = []
-
     if row + 1 == height and column + 1 == width:
         return total + matrix[row][column]
 
@@ -46,12 +45,12 @@ def testValue(row, column, total=0):
     if row + 1 < height:
         tests.append([row+1, column])
 
+    testResults = []
+
     for r, c in tests:
-        testValues.append(testValue(r, c, total))
+        testResults.append(testValue(r, c, total))
 
-    lowest = min(testValues)
-
-    total += (matrix[row][column] + lowest)
+    total += (matrix[row][column] + min(testResults))
 
     doneDict[dictKey] = total
 
