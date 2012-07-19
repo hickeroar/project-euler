@@ -20,24 +20,19 @@ Find the product of the coefficients, a and b, for the quadratic expression that
 number of primes for consecutive values of n, starting with n = 0.
 """
 
-
-
-coefficientProduct = 0
-numPrimes = 0
-
 from math import sqrt
 primes = {}
 def isPrimeNumber(number):
-
     if number in primes:
         return True
-
     for divisor in xrange(3, int(sqrt(number))+1, 2):
         if number % divisor == 0:
             return False
-
     primes[number] = True
     return True
+
+coefficientProduct = 0
+numPrimes = 0
 
 for a in xrange(-1000, 1001):
     for b in xrange(-1000, 1001):
