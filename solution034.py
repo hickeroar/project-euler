@@ -23,7 +23,7 @@ factorials = {
     0:factorial(0)
 }
 
-for num in xrange(3,40730):
+for num in xrange(3,factorials[9]*7):
     workNum = num
     workSum = 0
 
