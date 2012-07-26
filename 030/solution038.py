@@ -23,7 +23,7 @@ for x in xrange(0,1000001):
 def isPandigital(strNum):
     return len(strNum) == 9 and len(set(strNum).intersection(set("123456789"))) == 9
 
-for x in [a for a in xrange(9999, 9111, -1) if "0" not in str(a)]:
+for x in [a for a in xrange(9999, 0, -1) if "0" not in str(a)]:
     curStr = ""
     for n in [1,2]:
         curStr += str(x*n)

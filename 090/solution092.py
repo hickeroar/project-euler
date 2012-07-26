@@ -15,7 +15,7 @@ How many starting numbers below ten million will arrive at 89?
 
 def primeCache(ones, eightynines):
 
-    for x in xrange(567, 2, -1):
+    for x in xrange(567, 1, -1):
 
         if x in ones or x in eightynines:
             continue
@@ -26,19 +26,19 @@ def primeCache(ones, eightynines):
 
         while not found:
 
-            if curNum == 1 or curNum in ones:
+            nums.append(curNum)
+
+            if curNum == 1:
                 found = True
                 for n in nums:
                     ones[n] = True
                 break
 
-            if curNum == 89 or curNum in eightynines:
+            if curNum == 89:
                 found = True
                 for n in nums:
                     eightynines[n] = True
                 break
-
-            nums.append(curNum)
 
             workNum = curNum
             curNum = 0
@@ -55,17 +55,17 @@ primeCache(ones, eightynines)
 
 total89s = 0
 
-for x in xrange(10000001, 2, -1):
+for x in xrange(9999999, 1, -1):
 
     workNum = x
-    x = 0
+    var = 0
 
     while workNum:
         digit = (workNum % 10)**2
-        x += digit
+        var += digit
         workNum /= 10
 
-    if x in eightynines:
+    if var in eightynines:
         total89s += 1
 
 print total89s
