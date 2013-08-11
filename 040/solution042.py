@@ -1,4 +1,4 @@
-'''
+"""
 The nth term of the sequence of triangle numbers is given by, t(sub)n = 1/2n(n+1); so the first ten triangle numbers are:
 
 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...
@@ -8,7 +8,7 @@ we form a word value. For example, the word value for SKY is 19 + 11 + 25 = 55 =
 number then we shall call the word a triangle word.
 
 Find how many triangle words there are in the text file
-'''
+"""
 words = open('solution042.txt', "r").read().replace('"','').split(',')
 
 
